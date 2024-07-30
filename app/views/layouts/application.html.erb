@@ -13,6 +13,9 @@
 
   <body>
     <main class="prose mx-auto mt-28 px-5">
+      <%= tag.p notice, class: "bg-green-100 text-green-800 p-4 rounded" if notice %>
+      <%= tag.p alert, class: "bg-yellow-100 text-yellow-800 p-4 rounded" if alert %>
+
       <%= yield %>
     </main>
   </body>
