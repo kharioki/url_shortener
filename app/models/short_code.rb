@@ -18,5 +18,21 @@ class ShortCode
   end
 
   def self.decode(string)
+    return 0 if string.nil? || string.empty?
+
+    number = 0
+
+    string.each_char do |char|
+      index = ALPHABET.index(char)
+      number = number * BASE + index
+    end
+
+    # string.reverse.each_char.with_index do |char, index| # slower
+    #   power = BASE**index
+    #   index = ALPHABET.index(char)
+    #   number += index * power
+    # end
+
+    number
   end
 end
