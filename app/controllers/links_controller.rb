@@ -4,8 +4,10 @@ class LinksController < ApplicationController
 
   def index
     # @links = Link.order(created_at: :desc)
-    @links = Link.recent_first
+    @pagy, @links = pagy Link.recent_first
     @link ||= Link.new
+  rescue Pagy::OverflowError
+    redirect_to root_path
   end
 
   def show
