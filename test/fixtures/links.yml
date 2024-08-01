@@ -1,13 +1,24 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
+anonymous:
+  url: https://gorails.com
+  title: GoRails
+  description: Ruby on Rails Screencasts
+  image:
+  views_count: 0
+
 one:
-  url: MyString
-  description: MyString
-  image: MyString
+  user: one
+  url: https://kharioki.com
+  title: Kharioki
+  description: My portfolio
+  image:
   views_count: 1
 
 two:
-  url: MyString
-  description: MyString
-  image: MyString
+  user: two
+  url: https://x.com
+  title: X
+  description: Twitter
+  image:
   views_count: 1
